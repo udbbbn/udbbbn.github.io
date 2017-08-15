@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="/static/img/favicon.ico" />
+        <title>将sublime打造成'神级'编辑器 - udbbbn</title>
+        <meta name="author" content="udbbbn" />
+        <meta name="description" content="将sublime打造成'神级'编辑器" />
+        <meta name="keywords" content="将sublime打造成'神级'编辑器, udbbbn, sublime" />
+
+        <meta content="0" property="fb:app_id">
+        <meta content="udbbbn" property="og:site_name">
+        
+          <meta content="将sublime打造成'神级'编辑器" property="og:title">
+        
+        
+          <meta content="article" property="og:type">
+        
+        
+          <meta content="用于记录个人学习" property="og:description">
+        
+        
+          <meta content="/sublime/2017/07/30/sublime%E6%8F%92%E4%BB%B6.html" property="og:url">
+        
+        
+          <meta content="2017-07-30T19:42:28+08:00" property="article:published_time">
+          <meta content="/about/" property="article:author">
+        
+        
+          <meta content="/static/img/logo-high-resolution.png" property="og:image">
+        
+        
+          
+          <meta content="sublime" property="article:section">
+          
+        
+        
+          
+        
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@\#">
+        <meta name="twitter:creator" content="@\#">
+        
+          <meta name="twitter:title" content="将sublime打造成'神级'编辑器">
+        
+        
+          <meta name="twitter:url" content="/sublime/2017/07/30/sublime%E6%8F%92%E4%BB%B6.html">
+        
+        
+          <meta name="twitter:description" content="用于记录个人学习">
+        
+        
+
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+      <script type="text/javascript">window.baseurl = '';</script>
+      
+        <!-- Custom Fonts -->
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+        <!-- FontAwesome icons -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/74dfc6cf47.css">
+
+        <!-- Core BootStrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <!-- Material Design CSS -->
+        <link rel="stylesheet" href="/static/css/bootstrap-material-design.min.css">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/static/css/syntax.css">
+
+        <!-- Custom CSS -->        
+        <link rel="stylesheet" href="/static/css/thickbox.css">
+        <link rel="stylesheet" href="/static/css/main.css">
+        <link rel="stylesheet" href="/static/css/projects.css">
+
+        <script type="text/javascript">
+          //loadingImage is relative to project dir
+          var tb_pathToImage = "/static/img/loadingAnimation.gif";
+        </script>
+
+  </head>
+
+  <body class="home overflow-hidden">
+    <div class="header-panel shadow-z-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-4 col-xs-12">
+            <div class="row-picture">
+              <img id="about" class="logo-img" src="/static/img/avatar.png" height="75px" width="75px">
+            </div>
+            <div class="row-details">
+              <h4 class="list-group-item-heading">udbbbn</h4>
+              <p class="list-group-item-text">只是一个编程菜鸟</p>
+              <div class="social-icons">
+	
+        <a class="icon" target="_blank" href="http://wpa.qq.com/msgrd?V=1&Uin=669559765&Site=ioshenmue& Menu=yes"><i class="fa fa-qq"></i></a>
+    
+        <a class="icon" target="_blank" href=""><i class="fa fa-wechat"></i></a>
+    
+</div>
+
+            </div>
+            <div class="navbar-header pull-right">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-2x fa-bars"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-md-9 col-sm-8 col-xs-12">
+          <div class="row">
+            <h2 class="blog-title-pro col-md-6 col-sm-12 col-xs-12 ">将sublime打造成'神级'编辑器</h2>
+            
+            <div class="col-md-6 col-sm-12 col-xs-12 searchcontrol" id="js-search">
+              <input class="form-control" type="text" id="js-search__input" placeholder="Search">
+              <ul class="search__results" id="js-search__results"></ul>
+            </div>
+            
+            </div>
+            <p class="info">
+              
+                <span class="time">30 Jul 2017</span>
+              
+              
+                <span class="categories">
+                  &raquo; 
+                  
+                    <a href="/category/sublime">sublime</a>
+                    
+                  
+                </span>
+              
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container main outer">
+      <div class="row">
+        <div class="col-md-3 col-xs-12">
+              <nav class="menu">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="list-separator nav navbar-nav well well-primary post">
+
+	
+	
+	
+	
+	
+	
+    
+	
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12 current-menu-item sublime%E6%8F%92%E4%BB%B6.html"><a href="/" target="_self"><i class="fa fa-home"></i> 主页</a></li>
+
+	
+	
+	
+	
+	
+	
+    
+	
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  sublime%E6%8F%92%E4%BB%B6.html"><a href="/about/" target="_self"><i class="fa fa-comments"></i> 关于</a></li>
+
+	
+	
+	
+	
+	
+	
+    
+	
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  sublime%E6%8F%92%E4%BB%B6.html"><a href="/projects" target="_self"><i class="fa fa-desktop"></i> 项目</a></li>
+
+	
+	
+	
+	
+	
+	
+    
+	
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  sublime%E6%8F%92%E4%BB%B6.html"><a href="/#" target="_self"><i class="fa fa-graduation-cap"></i> 个人简历</a></li>
+
+	
+	
+	
+	
+	
+	
+    
+	
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  sublime%E6%8F%92%E4%BB%B6.html"><a href="https://github.com/udbbbn" target="_self"><i class="fa fa-github"></i> Github</a></li>
+
+</ul>
+
+    </div>
+    </nav>
+
+        </div>
+        <div class="col-md-9 col-xs-12 full">
+          <div class="post-content well">
+<article class="content">
+    <div class="post"><h4>相信许多人的IDE都是sublime，这说明sublime确实是一个十分方便的编辑器，但是很多人不知道的是当sublime安装上了插件将会有多方便。</h4>
+<h4>本文的title有点大，是否好用就仁者见仁智者见智了。以下插件供君选择：</h4>
+<hr />
+<p><strong>Package Control 插件管理</strong></p>
+
+<p>sublime text非常强大的插件管理工具，按下<code class="highlighter-rouge">Ctrl+Shift+P</code>,输入install 
+就可以对sublime进行插件安装</p>
+
+<p><img src="https://raw.githubusercontent.com/udbbbn/Img/master/J%25G1.png" alt="" /></p>
+
+<p>安装方法为在sublime内按下</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Ctrl+`显示控制台 然后再命令行内输入
+
+ import urllib.request,os,hashlib; h = 
+'df21e130d211cfc94d9b0905775a7c0f' +
+ '1e3d39e33b79698005270310898eea76'; pf = 'Package 
+Control.sublime-package'; ipp = 
+sublime.installed_packages_path(); 
+urllib.request.install_opener( urllib.request.build_opener
+( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen	
+( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh 
+= hashlib.sha256(by).hexdigest(); print('Error validating 
+download (got %s instead of %s), please try manual install' % 
+(dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write
+(by)
+</code></pre>
+</div>
+
+<p>以上是sublime3的代码 若为sublime2请输入一下代码</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code> import urllib2,os,hashlib; h = 
+'df21e130d211cfc94d9b0905775a7c0f' + 
+'1e3d39e33b79698005270310898eea76'; pf = 'Package 
+Control.sublime-package'; ipp = 
+sublime.installed_packages_path(); os.makedirs( ipp ) if not 
+os.path.exists(ipp) else None; urllib2.install_opener
+( urllib2.build_opener( urllib2.ProxyHandler()) ); by = 
+urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%
+20')).read(); dh = hashlib.sha256(by).hexdigest(); open
+( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; 
+print('Error validating download (got %s instead of %s), please 
+try manual install' % (dh, h) if dh != h else 'Please restart 
+Sublime Text to finish installation')
+</code></pre>
+</div>
+
+<p>另外，sublime3插件也可以在github上下载源文件并放在</p>
+
+<blockquote>
+  <p>/path/Sublime Text 3\Packages</p>
+</blockquote>
+
+<p>目录下，并重启，即可生效。</p>
+
+<p><strong>BracketHighlighter 高亮显示匹配的括号、引号和标签</strong></p>
+
+<p>BracketHighlighter这个插件能在左侧高亮显示匹配的括号、引号和标签，能匹配的 [] ,  () ,  {} ,  “”,  ‘’ ,  <tag></tag>等甚至是自定义的标签，当看到密密麻麻的代码分不清标签之间包容嵌套的关系时，这款插件就能很好地帮你理清楚代码结构，快速定位括号，引号和标签内的范围。</p>
+
+<p>github地址：<a href="https://github.com/facelessuser/BracketHighlighter">https://github.com/facelessuser/BracketHighlighter</a></p>
+
+<p><strong>TrailingSpacer 高亮显示多余的空格和Tab</strong></p>
+
+<p>有时候在代码结尾打多了几个空格或Tab，一般不会察觉，TrailingSpacer这款插件能高亮显示多余的空格和Tab，并可以一键删除它们，有代码洁癖的朋友应该会喜欢这个插件。</p>
+
+<p>github地址：<a href="https://github.com/SublimeText/TrailingSpaces">https://github.com/SublimeText/TrailingSpaces</a></p>
+
+<p>注意，在github上下载的插件缺少了一个设置快捷键的文件，可以新建一个名字和后缀为Default (Windows).sublime-keymap的文件，添加以下代码，即可设置“删除多余空格”和“是否开启TrailingSpacer ”的快捷键了。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>[
+	{ "keys": ["ctrl+alt+d"], "command": "delete_trailing_spaces" },	
+	{ "keys": ["ctrl+alt+o"], "command": "toggle_trailing_spaces" }
+] **Alignment 等号对齐**
+</code></pre>
+</div>
+
+<p>按Ctrl+Alt+A，可以将凌乱的代码以等号为准左右对其，适合有代码洁癖的朋友。</p>
+
+<p>github地址：<a href="https://github.com/wbond/sublime_alignment">https://github.com/wbond/sublime_alignment</a></p>
+
+<p><strong>Clipboard-history 粘贴板历史记录</strong></p>
+
+<p>有了这个插件，便可方便使用sublime text 3里的粘贴板历史记录内容，快捷键Ctrl+Shift+V可调出该历史记录面板，按方向键选择想要粘贴的历史记录。不过这是sublime text 2下的插件，Ctrl+Shift+D清除粘贴板历史记录好像不能生效，不过重启sublime也可清除粘贴板的历史记录。</p>
+
+<p>github地址：<a href="https://github.com/kemayo/sublime-text-2-clipboard-history">https://github.com/kemayo/sublime-text-2-clipboard-history</a></p>
+
+<p><strong>gbk4subl 支持GBK编码</strong></p>
+
+<p>sublime text一个遗憾是不支持中文GBK编码，在编辑一些GBK编码的文件时就会出现乱码，还好sublime text 2有很多可以支持GBK编码的插件，可惜大多在sublime text 3下都不能工作，在github找了下，还好还有gbk4subl这款能让sublime text 3支持GBK编码的插件。</p>
+
+<p>github地址：<a href="https://github.com/jeewood/gbk4subl">https://github.com/jeewood/gbk4subl</a></p>
+
+<p><strong>ColorPicker 调色盘</strong></p>
+
+<p>在编辑CSS样式的时候，要加个自己喜欢颜色或改改颜色啥的，要到PS里去调色？ColorPicker可以让sublime text 3内置一个调色盘，调好颜色，点击OK就会在光标处生成十六进制颜色代码。</p>
+
+<p>github地址：<a href="https://github.com/weslly/ColorPicker">https://github.com/weslly/ColorPicker</a></p>
+
+<p><strong>CSScomb CSS属性排序</strong></p>
+
+<p>有时候看看自己写的CSS文件，会不会觉得属性很乱查找不易维护难？CSScomb可以按照一定的CSS属性排序规则，将杂乱无章的CSS属性进行重新排序。选中要排序的CSS代码，按Ctrl+Shift+C，即可对CSS属性重新排序了，代码从此简洁有序易维护，如果不款选代码则插件将排序文件中所有的CSS属性。当然，可以自己自定义CSS属性排序规则，打开插件目录里的CSScomb.sublime-settings文件，更改里面的CSS属性顺序就行了。因为这个插件使用PHP写的，要使他工作需要在环境变量中添加PHP的路径，具体请看github上的说明。</p>
+
+<p>github地址：<a href="https://github.com/csscomb/sublime-csscomb">https://github.com/csscomb/sublime-csscomb</a></p>
+
+<p><strong>JsFormat javascript格式化</strong></p>
+
+<p>有时从网上扒了人家的js代码来学习学习，打开发现被压缩了，这时就可以用JsFormat插件格式化js代码，恢复未压缩时候的排版，挺给力的。按快捷键Ctrl+Alt+F即可格式化当前的js文件了。</p>
+
+<p>github地址：<a href="https://github.com/jdc0589/JsFormat">https://github.com/jdc0589/JsFormat</a></p>
+
+<p><strong>javascript-API-Completions</strong></p>
+
+<p>支持Javascript、JQuery、Twitter Bootstrap框架、HTML5标签属性提示的插件，是少数支持sublime text 3的后缀提示的插件，HTML5标签提示sublime text 3自带，不过JQuery提示还是很有用处的，也可设置要提示的语言。</p>
+
+<p>github地址：<a href="https://github.com/Pleasurazy/Sublime-Better-Completion">https://github.com/Pleasurazy/Sublime-Better-Completion</a></p>
+
+<p><strong>SublimeTmpl 快速生成文件模板</strong></p>
+
+<p>一直都很奇怪为什么sublime text 3没有新建文件模板的功能，像html头部的DTD声明每次都要复制粘贴。用SublimeTmpl这款插件终于可以解脱了，SublimeTmpl能新建html、css、javascript、php、python、ruby六种类型的文件模板，所有的文件模板都在插件目录的templates文件夹里，可以自定义编辑文件模板。</p>
+
+<p>SublimeTmpl默认的快捷键</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ctrl+alt+h html
+ctrl+alt+j javascript
+ctrl+alt+c css
+ctrl+alt+p php
+ctrl+alt+r ruby
+ctrl+alt+shift+p python 如果想要新建其他类型的文件模板的话，先自定义文件模板方在templates文件夹里，再分别打开Default (Windows).sublime-keymap、Default.sublime-commands、Main.sublime-menu、SublimeTmpl.sublime-settings这四个文件照着里面的格式自定义想要新建的类型，这里就详细介绍了，请各位自己折腾哈~
+</code></pre>
+</div>
+
+<p>github地址：<a href="https://github.com/kairyou/SublimeTmpl">https://github.com/kairyou/SublimeTmpl</a></p>
+
+<p><strong>sublimeLinter 代码错误提示</strong></p>
+
+<p>好话写在前面：sublimeLinter是少数几个能在sublime text 3工作的代码检查插件，sublimeLinter能检查html、css、javascript、php等众多语言的错误代码并给出提示，前提是需要配置相应语言的环境，要检查js代码需要安装node.js，检查php代码需要安装php并配置环境等，用这个插件能及时帮我们纠正代码的错误，并培养我们良好的编码习惯和风格。</p>
+
+<p>github地址：<a href="https://github.com/SublimeLinter/SublimeLinter-for-ST2/tree/sublime-text-3">https://github.com/SublimeLinter/SublimeLinter-for-ST2/tree/sublime-text-3</a></p>
+
+<p>以上就是个人觉得不错的插件，在<a href="https://packagecontrol.io/browse">https://packagecontrol.io/browse</a>这里可以找到更多的sublime插件。细心的朋友应该发现了很多插件的快捷键是重复的，可以自行修改所好快捷键。</p>
+</div>
+    <hr />
+    <div class="share-page">
+    <!-- Share this on &rarr;
+ <a href="https://twitter.com/share" class="twitter-share-button" data-via="\#">Tweet</a> -->
+<!--<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> -->
+
+<!-- Google + -->
+<div class="g-plus" data-action="share" data-annotation="bubble"></div>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+<!-- Facebook -->
+<div class="fb-share-button" data-href="/sublime/2017/07/30/sublime%E6%8F%92%E4%BB%B6.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
+</div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</article>
+<hr />
+
+
+    
+    
+        
+            
+        
+    
+
+    
+    
+        
+            
+        
+    
+
+    
+    
+        
+            
+        
+    
+
+    
+    
+        
+            
+        
+    
+
+    
+    
+        
+            
+        
+    
+
+    
+    
+        
+            
+        
+    
+
+
+
+<div class="PageNavigation">
+  
+    <a class="prev pull-left" href="/nodejs/2017/07/29/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91-puer.html">&laquo; 前后端分离开发----puer</a>
+  
+  
+    <a class="next pull-right" href="/python/2017/08/13/python+selenium.html">python网页自动化操作 &raquo;</a>
+  
+</div>
+
+
+<div class="disqus-comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+
+        var disqus_shortname = "udbbbn";
+        var disqus_identifier = "_将sublime打造成'神级'编辑器";
+        var disqus_title = "将sublime打造成'神级'编辑器";
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    /* ]]> */
+    </script>
+</div>
+</div>
+          <div class="row">
+            <div class="col-md-12 col-xs-12 footer">
+              <footer>
+  © 2017 udbbbn <a href="#">Privacy link</a> - Powered by Jekyll.
+</footer>
+<div align="center">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-0000000000000000"
+    data-ad-slot="0000000000"
+    data-ad-format="auto"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+            </div>
+          </div>
+        </div> <!-- end /.col-md-9 -->
+      </div> <!-- end /.row -->
+    </div>
+
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script src="/static/js/super-search.js"></script>
+
+<script src="/static/js/thickbox-compressed.js"></script>
+<script src="/static/js/material.min.js"></script>
+<script src="/static/js/main.js"></script>
+<script src="/static/js/projects.js"></script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72862926-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
