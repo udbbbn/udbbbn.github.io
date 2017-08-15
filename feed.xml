@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>udbbbn</title>
+    <description>用于记录个人学习</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 15 Aug 2017 21:06:55 +0800</pubDate>
+    <lastBuildDate>Tue, 15 Aug 2017 21:06:55 +0800</lastBuildDate>
+    <generator>Jekyll v3.5.2</generator>
+    
+      <item>
+        <title>博客改用jekyll模板</title>
+        <description>&lt;p&gt;之前突然不满意自己博客模板，于是到&lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;http://jekyllthemes.org/&lt;/a&gt;找了一款觉得不错的模板，但是没注意这个模板是用ruby的，琢磨了好一会，决定把过程记录下来，以供他人参考。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;本教程仅在window环境下测试，其他环境请寻找其他教程&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4&gt;安装环境&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;前往&lt;a href=&quot;https://rubyinstaller.org/downloads/&quot;&gt;https://rubyinstaller.org/downloads/&lt;/a&gt;下载ruby安装程序&lt;/li&gt;
+  &lt;li&gt;在命令行窗口输入&lt;code class=&quot;highlighter-rouge&quot;&gt;ruby -v&lt;/code&gt;，若安装完成会提示ruby的版本号&lt;/li&gt;
+  &lt;li&gt;接着输入 &lt;code class=&quot;highlighter-rouge&quot;&gt;gem install jekyll bundle&lt;/code&gt;，&lt;strong&gt;gem&lt;/strong&gt; 是封装起来的ruby应用程序或代码库，可理解成&lt;a href=&quot;https://nodejs.org/en/&quot; title=&quot;nodejs&quot;&gt;nodejs&lt;/a&gt;中的&lt;code class=&quot;highlighter-rouge&quot;&gt;npm&lt;/code&gt;，&lt;strong&gt;bundle&lt;/strong&gt; 是用于检测应用依赖哪些第三方包，并下载，&lt;strong&gt;jekyll&lt;/strong&gt; 是静态博客网站生成器。&lt;/li&gt;
+  &lt;li&gt;确保 &lt;strong&gt;bundle&lt;/strong&gt; 版本的最新，最后在命令行输入&lt;code class=&quot;highlighter-rouge&quot;&gt;bundle update&lt;/code&gt;，进行更新。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4&gt;配置博客&lt;/h4&gt;
+&lt;p&gt;现在让我们创建一个静态博客吧&lt;/p&gt;
+
+&lt;p&gt;在你想要建立博客的目录下，命令行输入&lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new newBlog&lt;/code&gt;，就会在当前目录下创建一个 &lt;strong&gt;newBlog&lt;/strong&gt; 的文件夹，目录结构如下：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;文件夹_layouts：用于存放模板的文件夹，里面有两个模板，default.html和post.html&lt;/li&gt;
+  &lt;li&gt;文件夹_posts：用于存放博客文章的文件夹，里面有一篇markdown格式的文章–2017-08-15-welcome-to-jekyll.markdown&lt;/li&gt;
+  &lt;li&gt;文件夹css：存放博客所用css的文件夹&lt;/li&gt;
+  &lt;li&gt;.gitignore：可以删掉，后面会将项目添加到git项目，所以这个不需要了&lt;/li&gt;
+  &lt;li&gt;_coinfig.yml：jekyll的配置文件，里面可以定义相当多的配置参数，具体配置参数可以参照其官网&lt;/li&gt;
+  &lt;li&gt;index.html：项目的首页&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;根据实际需要，可能还需要创建如下文件或文件夹：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;_includes:用于存放一些固定的HTML代码段，文件为.html格式，可以在模板中通过liquid标签引入，常用来在各个模板中复用如 导航条、标签栏、侧边栏 之类的在每个页面上都一样不变的内容，需要注意的是，这个代码段也可以是未被编译的，也就是说也可以使用liquid标签放在这些代码段中&lt;/li&gt;
+  &lt;li&gt;image和js等自定义文件夹：用来存放一些需要的资源文件，如图片或者javascript文件，可以任意命名&lt;/li&gt;
+  &lt;li&gt;CNAME文件：用来在github上做域名绑定的，将在后面介绍&lt;/li&gt;
+  &lt;li&gt;favicon.ico：网站的小图标&lt;/li&gt;
+  &lt;li&gt;…..&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;想查看目录文件功能描述请移步至&lt;a href=&quot;http://jekyllcn.com/docs/structure/&quot;&gt;http://jekyllcn.com/docs/structure/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;若是想直接用其他人的模板，可前往&lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;http://jekyllthemes.org/&lt;/a&gt;寻找自己喜欢的模板，从&lt;a href=&quot;https://github.com/&quot; title=&quot;github&quot;&gt;github&lt;/a&gt;中&lt;code class=&quot;highlighter-rouge&quot;&gt;clone&lt;/code&gt;下来。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd D:/path/博客模板目录
+bundle install		 			安装所需第三方包
+bundle exec jekyll build		会将网站生成到目录下的_site文件夹内
+bundle exec jekyll serve		会在本地挂起网站 网页输入localhost:4000即可查看
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;就可以在本地查看clone下来的博客了，但是我们发现很多信息都是原作者的，怎么办呢。原来文件目录下有个叫 &lt;strong&gt;_config.yml&lt;/strong&gt; 的文件，这个文件就是配置文件了。&lt;/p&gt;
+
+&lt;p&gt;配置文件比较复杂，详细请看&lt;a href=&quot;http://jekyllcn.com/docs/configuration/&quot;&gt;http://jekyllcn.com/docs/configuration/&lt;/a&gt;，不过既然是模板，我们只需要把原作者的信息修改成我们自己的即可。&lt;/p&gt;
+
+&lt;h4&gt;发布博文&lt;/h4&gt;
+
+&lt;p&gt;博客已经配置好了，那我要想发一篇博文应该怎么办呢？&lt;/p&gt;
+
+&lt;p&gt;博客目录下有个文件夹叫 &lt;strong&gt;_post&lt;/strong&gt; 里面放的就是博文了，格式是&lt;code class=&quot;highlighter-rouge&quot;&gt; 2017-07-23-文件名&lt;/code&gt;，文件类型是&lt;code class=&quot;highlighter-rouge&quot;&gt;md&lt;/code&gt;，就是&lt;a href=&quot;https://daringfireball.net/projects/markdown/&quot;&gt;markdown&lt;/a&gt;文件类型。具体安装请自行查找。&lt;/p&gt;
+
+&lt;p&gt;博文内的开头格式为：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: 文章所使用的模板名称，也就是_layouts中定义的模板的文件名去掉.html
+title:  文章的标题
+date:   编写文章的日期 
+categories: 定义了文章所属的目录，一个list，将会根据这个目录的list来创建目录并将文章html放在生成的目录下
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h5&gt;搞定完这些就大功告成了，更多有关jekyll内容请移步至：&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;https://mmistakes.github.io/skinny-bones-jekyll/getting-started/#installation&quot;&gt;https://mmistakes.github.io/skinny-bones-jekyll/getting-started/#installation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;以及jekyll中文版官网：&lt;a href=&quot;http://jekyllcn.com/&quot;&gt;http://jekyllcn.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;英文较好的推荐查看jekyll官网网址：&lt;a href=&quot;http://jekyllrb.com/&quot;&gt;http://jekyllrb.com/&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;感谢阅读&lt;/strong&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 15 Aug 2017 20:45:28 +0800</pubDate>
+        <link>/jekyll/2017/08/15/%E5%8D%9A%E5%AE%A2%E6%94%B9%E7%94%A8jekyll%E6%A8%A1%E6%9D%BF.html</link>
+        <guid isPermaLink="true">/jekyll/2017/08/15/%E5%8D%9A%E5%AE%A2%E6%94%B9%E7%94%A8jekyll%E6%A8%A1%E6%9D%BF.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
+    
+      <item>
+        <title>python网页自动化操作</title>
+        <description>&lt;p&gt;因一次对话，让我想做一个能自动打开网页，登陆的脚本…&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;因为本次操作并不是取数据，而是要用浏览器显示监控，故使用的工具为Selenium&lt;/p&gt;
+
+&lt;h4&gt;环境配置&lt;/h4&gt;
+&lt;p&gt;python安装教程请自行百度&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;安装Selenium&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;在命令行窗口输入&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install selenium 或直接下载压缩包：
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pypi.python.org/pypi/selenium&quot;&gt;https://pypi.python.org/pypi/selenium&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;解压后，命令行进入目录输入&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python setup.py build
+python setup.py install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;selenium默认使用&lt;strong&gt;firefox&lt;/strong&gt;浏览器，所以若是想要用chrome或者ie浏览器，需要下载驱动&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chrome&lt;/strong&gt;驱动：&lt;a href=&quot;https://sites.google.com/a/chromium.org/chromedriver/&quot;&gt;https://sites.google.com/a/chromium.org/chromedriver/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ie&lt;/strong&gt;驱动：&lt;a href=&quot;http://docs.seleniumhq.org/download/&quot;&gt;http://docs.seleniumhq.org/download/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;驱动版本对应浏览器，若下载的是32位的则会用32位ie，反之64位。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;下载完后，将驱动放置浏览器目录下，并添加至环境变量&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Path: ;浏览器目录
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;ps：若selenium版本为3.x，需要下载&lt;code class=&quot;highlighter-rouge&quot;&gt;geckodriver&lt;/code&gt;，geckodriver是一款原生态第三方浏览器，3.x版本会用geckodriver来驱动firefox，下载地址  &lt;a href=&quot;https://github.com/mozilla/geckodriver/releases&quot;&gt;https://github.com/mozilla/geckodriver/releases&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;记得配置ie的保护模式&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;如果要用ie浏览器，需要配置ie的保护模式。ie选项-安全 将保护模式全部打勾或者都不打勾即可。
+还要保证&lt;strong&gt;网页缩放率为100%&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;以下是官网的一个例子&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+
+browser = webdriver.Firefox()
+
+browser.get('http://www.yahoo.com')
+assert 'Yahoo!' in browser.title
+
+elem = browser.find_element_by_name('p')  # Find the search box
+elem.send_keys('seleniumhq' + Keys.RETURN)
+
+browser.quit()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;这里是自动登录的demo&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 找到元素
+UserName = browser.find_element_by_id(&quot;loginUserName&quot;) 
+# 模拟输入
+UserName.send_keys(&quot;账号&quot;)  
+# 找到元素
+PassWord = browser.find_element_by_id(&quot;loginPassword&quot;)
+# 模拟输入
+PassWord.send_keys(&quot;密码&quot;)  
+# 找到登陆按钮
+Btn = browser.find_element_by_class_name(&quot;loginbtn&quot;)
+# 模拟点击事件
+Btn.click()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;元素定位&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;通过id定位元素：find_element_by_id(&quot;id_vaule&quot;)
+通过name定位元素：find_element_by_name(&quot;name_vaule&quot;)
+通过tag_name定位元素：find_element_by_tag_name(&quot;tag_name_vaule&quot;)
+通过class_name定位元素：find_element_by_class_name(&quot;class_name&quot;)
+通过css定位元素：find_element_by_css_selector();
+通过xpath定位元素：find_element_by_xpath(&quot;xpath&quot;)
+通过link定位：find_element_by_link_text(&quot;text_vaule&quot;)或者find_element_by_partial_link_text()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4&gt;转exe文件&lt;/h4&gt;
+&lt;p&gt;python有个库叫&lt;code class=&quot;highlighter-rouge&quot;&gt;pyinstaller&lt;/code&gt;，可以将py文件转换成exe文件，方便没有python环境的机器使用。&lt;/p&gt;
+
+&lt;p&gt;安装方式&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install pyinstaller
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;使用方式 在所要转换文件的目录下&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pyinstaller yourprogram.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;参数如下&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-F 表示生成单个可执行文件
+-w 表示去掉控制台窗口
+-p 表示自定义需要加载的类路径，一般用不到
+-i 表示可执行文件的图标
+更多可命令行输入 pyinstaller -h 查看
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;selenium中文开发文档：&lt;a href=&quot;https://www.ctolib.com/docs//sfile/selenium-webdriver-simple-tutorial/index.html&quot;&gt;https://www.ctolib.com/docs//sfile/selenium-webdriver-simple-tutorial/index.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;主要操作都已经写出来了，最后附上本人写的demo
+&lt;a href=&quot;https://github.com/udbbbn/Python/blob/master/autoSelenium.py&quot;&gt;https://github.com/udbbbn/Python/blob/master/autoSelenium.py&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;感谢阅读&lt;/strong&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 13 Aug 2017 23:55:04 +0800</pubDate>
+        <link>/python/2017/08/13/python+selenium.html</link>
+        <guid isPermaLink="true">/python/2017/08/13/python+selenium.html</guid>
+        
+        
+        <category>python</category>
+        
+      </item>
+    
+      <item>
+        <title>将sublime打造成'神级'编辑器</title>
+        <description>&lt;h4&gt;相信许多人的IDE都是sublime，这说明sublime确实是一个十分方便的编辑器，但是很多人不知道的是当sublime安装上了插件将会有多方便。&lt;/h4&gt;
+&lt;h4&gt;本文的title有点大，是否好用就仁者见仁智者见智了。以下插件供君选择：&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;Package Control 插件管理&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;sublime text非常强大的插件管理工具，按下&lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl+Shift+P&lt;/code&gt;,输入install 
+就可以对sublime进行插件安装&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/udbbbn/Img/master/J%25G1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;安装方法为在sublime内按下&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ctrl+`显示控制台 然后再命令行内输入
+
+ import urllib.request,os,hashlib; h = 
+'df21e130d211cfc94d9b0905775a7c0f' +
+ '1e3d39e33b79698005270310898eea76'; pf = 'Package 
+Control.sublime-package'; ipp = 
+sublime.installed_packages_path(); 
+urllib.request.install_opener( urllib.request.build_opener
+( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen	
+( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh 
+= hashlib.sha256(by).hexdigest(); print('Error validating 
+download (got %s instead of %s), please try manual install' % 
+(dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write
+(by)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;以上是sublime3的代码 若为sublime2请输入一下代码&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; import urllib2,os,hashlib; h = 
+'df21e130d211cfc94d9b0905775a7c0f' + 
+'1e3d39e33b79698005270310898eea76'; pf = 'Package 
+Control.sublime-package'; ipp = 
+sublime.installed_packages_path(); os.makedirs( ipp ) if not 
+os.path.exists(ipp) else None; urllib2.install_opener
+( urllib2.build_opener( urllib2.ProxyHandler()) ); by = 
+urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%
+20')).read(); dh = hashlib.sha256(by).hexdigest(); open
+( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; 
+print('Error validating download (got %s instead of %s), please 
+try manual install' % (dh, h) if dh != h else 'Please restart 
+Sublime Text to finish installation')
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;另外，sublime3插件也可以在github上下载源文件并放在&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;/path/Sublime Text 3\Packages&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;目录下，并重启，即可生效。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;BracketHighlighter 高亮显示匹配的括号、引号和标签&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;BracketHighlighter这个插件能在左侧高亮显示匹配的括号、引号和标签，能匹配的 [] ,  () ,  {} ,  “”,  ‘’ ,  &lt;tag&gt;&lt;/tag&gt;等甚至是自定义的标签，当看到密密麻麻的代码分不清标签之间包容嵌套的关系时，这款插件就能很好地帮你理清楚代码结构，快速定位括号，引号和标签内的范围。&lt;/p&gt;
+
+&lt;p&gt;github地址：&lt;a href=&quot;https://github.com/facelessuser/BracketHighlighter&quot;&gt;https://github.com/facelessuser/BracketHighlighter&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;TrailingSpacer 高亮显示多余的空格和Tab&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;有时候在代码结尾打多了几个空格或Tab，一般不会察觉，TrailingSpacer这款插件能高亮显示多余的空格和Tab，并可以一键删除它们，有代码洁癖的朋友应该会喜欢这个插件。&lt;/p&gt;
+
+&lt;p&gt;github地址：&lt;a href=&quot;https://github.com/SublimeText/TrailingSpaces&quot;&gt;https://github.com/SublimeText/TrailingSpaces&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;注意，在github上下载的插件缺少了一个设置快捷键的文件，可以新建一个名字和后缀为Default (Windows).sublime-keymap的文件，添加以下代码，即可设置“删除多余空格”和“是否开启TrailingSpacer ”的快捷键了。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[
+	{ &quot;keys&quot;: [&quot;ctrl+alt+d&quot;], &quot;command&quot;: &quot;delete_trailing_spaces&quot; },	
+	{ &quot;keys&quot;: [&quot;ctrl+alt+o&quot;], &quot;command&quot;: &quot;toggle_trailing_spaces&quot; }
+] **Alignment 等号对齐**
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;按Ctrl+Alt+A，可以将凌乱的代码以等号为准左右对其，适合有代码洁癖的朋友。&lt;/p&gt;
+
+&lt;p&gt;github地址：&lt;a href=&quot;https://github.com/wbond/sublime_alignment&quot;&gt;https://github.com/wbond/sublime_alignment&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Clipboard-history 粘贴板历史记录&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;有了这个插件，便可方便使用sublime text 3里的粘贴板历史记录内容，快捷键Ctrl+Shift+V可调出该历史记录面板，按方向键选择想要粘贴的历史记录。不过这是sublime text 2下的插件，Ctrl+Shift+D清除粘贴板历史记录好像不能生效，不过重启sublime也可清除粘贴板的历史记录。&lt;/p&gt;
+
+&lt;p&gt;github地址：&lt;a href=&quot;https://github.com/kemayo/sublime-text-2-clipboard-history&quot;&gt;https://github.com/kemayo/sublime-text-2-clipboard-history&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;gbk4subl 支持GBK编码&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;sublime text一个遗憾是不支持中文GBK编码，在编辑一些GBK编码的文件时就会出现乱码，还好sublime text 2有很多可以支持GBK编码的插件，可惜大多在sublime text 3下都不能工作，在github找了下，还好还有gbk4subl这款能让sublime text 3支持GBK编码的插件。&lt;/p&gt;
+
+&lt;p&gt;github地址：&lt;a href=&quot;https://github.com/jeewood/gbk4subl&quot;&gt;https://github.com/jeewood/gbk4subl&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ColorPicker 调色盘&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;在编辑CSS样式的时候，要加个自己喜欢颜色或改改颜色啥的，要到PS里去调色？ColorPicker可以让sublime text 3内置一个调色盘，调好颜色，点击OK就会在光标处生成十六进制颜色代码。&lt;/p&gt;
+
+&lt;p&gt;github地址：&lt;a href=&quot;https://github.com/weslly/ColorPicker&quot;&gt;https://github.com/weslly/ColorPicker&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;CSScomb CSS属性排序&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;有时候看看自己写的CSS文件，会不会觉得属性很乱查找不易维护难？CSScomb可以按照一定的CSS属性排序规则，将杂乱无章的CSS属性进行重新排序。选中要排序的CSS代码，按Ctrl+Shift+C，即可对CSS属性重新排序了，代码从此简洁有序易维护，如果不款选代码则插件将排序文件中所有的CSS属性。当然，可以自己自定义CSS属性排序规则，打开插件目录里的CSScomb.sublime-settings文件，更改里面的CSS属性顺序就行了。因为这个插件使用PHP写的，要使他工作需要在环境变量中添加PHP的路径，具体请看github上的说明。&lt;/p&gt;
+
+&lt;p&gt;github地址：&lt;a href=&quot;https://github.com/csscomb/sublime-csscomb&quot;&gt;https://github.com/csscomb/sublime-csscomb&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;JsFormat javascript格式化&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;有时从网上扒了人家的js代码来学习学习，打开发现被压缩了，这时就可以用JsFormat插件格式化js代码，恢复未压缩时候的排版，挺给力的。按快捷键Ctrl+Alt+F即可格式化当前的js文件了。&lt;/p&gt;
+
+&lt;p&gt;github地址：&lt;a href=&quot;https://github.com/jdc0589/JsFormat&quot;&gt;https://github.com/jdc0589/JsFormat&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;javascript-API-Completions&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;支持Javascript、JQuery、Twitter Bootstrap框架、HTML5标签属性提示的插件，是少数支持sublime text 3的后缀提示的插件，HTML5标签提示sublime text 3自带，不过JQuery提示还是很有用处的，也可设置要提示的语言。&lt;/p&gt;
+
+&lt;p&gt;github地址：&lt;a href=&quot;https://github.com/Pleasurazy/Sublime-Better-Completion&quot;&gt;https://github.com/Pleasurazy/Sublime-Better-Completion&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SublimeTmpl 快速生成文件模板&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;一直都很奇怪为什么sublime text 3没有新建文件模板的功能，像html头部的DTD声明每次都要复制粘贴。用SublimeTmpl这款插件终于可以解脱了，SublimeTmpl能新建html、css、javascript、php、python、ruby六种类型的文件模板，所有的文件模板都在插件目录的templates文件夹里，可以自定义编辑文件模板。&lt;/p&gt;
+
+&lt;p&gt;SublimeTmpl默认的快捷键&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ctrl+alt+h html
+ctrl+alt+j javascript
+ctrl+alt+c css
+ctrl+alt+p php
+ctrl+alt+r ruby
+ctrl+alt+shift+p python 如果想要新建其他类型的文件模板的话，先自定义文件模板方在templates文件夹里，再分别打开Default (Windows).sublime-keymap、Default.sublime-commands、Main.sublime-menu、SublimeTmpl.sublime-settings这四个文件照着里面的格式自定义想要新建的类型，这里就详细介绍了，请各位自己折腾哈~
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;github地址：&lt;a href=&quot;https://github.com/kairyou/SublimeTmpl&quot;&gt;https://github.com/kairyou/SublimeTmpl&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;sublimeLinter 代码错误提示&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;好话写在前面：sublimeLinter是少数几个能在sublime text 3工作的代码检查插件，sublimeLinter能检查html、css、javascript、php等众多语言的错误代码并给出提示，前提是需要配置相应语言的环境，要检查js代码需要安装node.js，检查php代码需要安装php并配置环境等，用这个插件能及时帮我们纠正代码的错误，并培养我们良好的编码习惯和风格。&lt;/p&gt;
+
+&lt;p&gt;github地址：&lt;a href=&quot;https://github.com/SublimeLinter/SublimeLinter-for-ST2/tree/sublime-text-3&quot;&gt;https://github.com/SublimeLinter/SublimeLinter-for-ST2/tree/sublime-text-3&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;以上就是个人觉得不错的插件，在&lt;a href=&quot;https://packagecontrol.io/browse&quot;&gt;https://packagecontrol.io/browse&lt;/a&gt;这里可以找到更多的sublime插件。细心的朋友应该发现了很多插件的快捷键是重复的，可以自行修改所好快捷键。&lt;/p&gt;
+</description>
+        <pubDate>Sun, 30 Jul 2017 19:42:28 +0800</pubDate>
+        <link>/sublime/2017/07/30/sublime%E6%8F%92%E4%BB%B6.html</link>
+        <guid isPermaLink="true">/sublime/2017/07/30/sublime%E6%8F%92%E4%BB%B6.html</guid>
+        
+        
+        <category>sublime</category>
+        
+      </item>
+    
+      <item>
+        <title>前后端分离开发----puer</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;近日在做外包时想要用手机查看效果(做的是响应式)，无奈没服务器 但是却发现一个可以在本机挂网站 手机查看的神器—puer&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;puer是一个可以实时编辑刷新的前端服务器&lt;/strong&gt;，以下是其特性：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;提供一个当前或指定路径的静态服务器&lt;/li&gt;
+  &lt;li&gt;所有浏览器的实时刷新：编辑css实时更新(update)页面样式，其他文件则重载(reload)页面&lt;/li&gt;
+  &lt;li&gt;提供简单属性的mock请求的配置功能，并且配置也是自动更新&lt;/li&gt;
+  &lt;li&gt;可用作代理服务器，调试开发既有服务器的页面，可与mock功能配合使用&lt;/li&gt;
+  &lt;li&gt;继承了&lt;a href=&quot;http://people.apache.org/~pmuellr/weinre/docs/latest/&quot;&gt;weinre&lt;/a&gt;，并提供二维码地址，方便移动端调试&lt;/li&gt;
+  &lt;li&gt;可以作为connect中间件使用(前提是后端为nodejs，否则请用代理模式)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;安装教程&lt;/h2&gt;
+&lt;h3&gt;安装&lt;/h3&gt;
+&lt;p&gt;首先确保你安装了&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;nodejs&lt;/a&gt;
+使用npm全局安装&lt;code class=&quot;highlighter-rouge&quot;&gt;puer&lt;/code&gt;命令&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nom install puer -g 输入`puer -h` 可以查看Help
+	Usage:  puer [options...]
+
+Options:
+  -p,--port server's listen port, 8000 default
+  -f,--filetype fileType to watch(split with '|'), default 'js|css|html|xhtml'
+  -d,--dir  your customer working dir. default current dir
+  -i,--inspect  start weinre server and debug all puer page
+  -x,--exclude  exclude file under watching(must be a regexp), default: ''
+  -a,--addonyour addon's path
+  -t,--target   proxy url
+ --no-reloadclose  auto-reload feature,(not recommended)
+ --no-launchclose the auto launch feature
+  -h,--help help list
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;使用&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /path/workspace
+puer
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;puer会打开&lt;a href=&quot;http://localhost:8000&quot;&gt;http://localhost:8000&lt;/a&gt;(端口可用指令&lt;code class=&quot;highlighter-rouge&quot;&gt;-p 8007&lt;/code&gt;参数进行控制 )，并弹出二维码供手机访问，十分方便！&lt;/p&gt;
+
+&lt;h3&gt;关于puer的教程就到这里啦&lt;/h3&gt;
+&lt;p&gt;参考&lt;a href=&quot;http://www.html-js.com/article/Before-and-after-the-frontend-development-tools-Puer-super-simple-tools--low-carbon-separation-of-the-end-of-development&quot;&gt;http://www.html-js.com/article/Before-and-after-the-frontend-development-tools-Puer-super-simple-tools–low-carbon-separation-of-the-end-of-development&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 29 Jul 2017 22:11:00 +0800</pubDate>
+        <link>/nodejs/2017/07/29/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91-puer.html</link>
+        <guid isPermaLink="true">/nodejs/2017/07/29/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91-puer.html</guid>
+        
+        
+        <category>nodejs</category>
+        
+      </item>
+    
+      <item>
+        <title>解决win10打不开报错问题</title>
+        <description>&lt;h4&gt;问题描述&lt;/h4&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;将开发环境换到笔记本后发现markdown打不开 报错’Awesomium.Windows.Controls.WebControl’，如下图：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/udbbbn/Img/master/Q19S%5DOM0W~EXEWM%24GL6%7D1%40X.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;解决方案&lt;/h4&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;命令行输入regedit 将下面的值改为0&lt;/strong&gt;
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\FipsAlgorithmPolicy\Enabled&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/udbbbn/Img/master/9DW6X.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;再次启动markdown 若会报html渲染错误 安装&lt;code class=&quot;highlighter-rouge&quot;&gt;awwsomium&lt;/code&gt; 这个软件后重启即可。&lt;/p&gt;
+
+&lt;p&gt;本文参考&lt;a href=&quot;http://blog.csdn.net/chengjierui/article/details/53065599&quot;&gt;链接&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 23 Jul 2017 14:47:00 +0800</pubDate>
+        <link>/markdown/2017/07/23/%E8%A7%A3%E5%86%B3win10%E6%89%93%E4%B8%8D%E5%BC%80markdown%E9%97%AE%E9%A2%98.html</link>
+        <guid isPermaLink="true">/markdown/2017/07/23/%E8%A7%A3%E5%86%B3win10%E6%89%93%E4%B8%8D%E5%BC%80markdown%E9%97%AE%E9%A2%98.html</guid>
+        
+        
+        <category>markdown</category>
+        
+      </item>
+    
+      <item>
+        <title>替换pelican-bootstrap3主题</title>
+        <description>&lt;p&gt;自从接触互联网以来，越来越发现博客的重要性。于是，又重新拾起博客，但由于之前只搭建过，并没有其他操作。所以就连替换主题都花了很大功夫。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;pelican主题更换&lt;/h3&gt;
+&lt;p&gt;首先在&lt;a href=&quot;https://github.com/getpelican/pelican-themes&quot;&gt;pelican主题开源库&lt;/a&gt;中找到自己想要的主题，本次替换的主题是&lt;a href=&quot;https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3&quot;&gt;pelican-bootstrap3&lt;/a&gt;，这个主题的配置好像跟其他的不一样，需要多配置些东西。&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;在根目录下的pelicanconf.py文件中添加或更改自己喜欢的主题。
+    &lt;pre&gt;&lt;code&gt;THEME = 'pelican-themes/pelican-bootstrap3'
+PLUGIN_PATHS = ['pelican-plugins', ]
+PLUGINS = ['i18n_subsites', ]
+JINJA_ENVIRONMENT = {
+ 'extensions': ['jinja2.ext.i18n'],
+}
+ &lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;然后clone&lt;a href=&quot;https://github.com/    getpelican/pelican-plugins&quot;&gt;pelican-plugins&lt;/a&gt;到根目录下(本主题所需)，配置已经在上一步骤完成了。&lt;/li&gt;
+  &lt;li&gt;最后在命令行输入&lt;code class=&quot;highlighter-rouge&quot;&gt;pip install python-gettext&lt;/code&gt;安装成功后再输入pelican content 即可输入至output文件夹。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;`make html`编译网页
+
+&lt;h3&gt;git提交代码&lt;/h3&gt;
+先输入`git status`可查看修改状态。
+&lt;pre&gt;&lt;code&gt;git add.
+git pull origin master
+git commit -m '注释'
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+最后在网页打开自己的github博客地址即可查看。
+例:&amp;lt;https://udbbbn.github.io/&amp;gt;
+(现已替换成jekyll模板)
+
+[参考链接1](https://github.com/getpelican/pelican-themes/issues/507)
+[参考链接2](https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3)
+&lt;/p&gt;
+</description>
+        <pubDate>Sun, 23 Jul 2017 14:47:00 +0800</pubDate>
+        <link>/pelican/2017/07/23/%E6%9B%BF%E6%8D%A2%E4%B8%BB%E9%A2%98.html</link>
+        <guid isPermaLink="true">/pelican/2017/07/23/%E6%9B%BF%E6%8D%A2%E4%B8%BB%E9%A2%98.html</guid>
+        
+        
+        <category>pelican</category>
+        
+      </item>
+    
+  </channel>
+</rss>
