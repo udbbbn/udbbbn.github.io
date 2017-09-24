@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="/static/img/favicon.ico" />
+        <title>html5之Range对象 - udbbbn</title>
+        <meta name="author" content="udbbbn" />
+        <meta name="description" content="html5之Range对象" />
+        <meta name="keywords" content="html5之Range对象, udbbbn, html5" />
+
+        <meta content="0" property="fb:app_id">
+        <meta content="udbbbn" property="og:site_name">
+        
+          <meta content="html5之Range对象" property="og:title">
+        
+        
+          <meta content="article" property="og:type">
+        
+        
+          <meta content="用于记录个人学习" property="og:description">
+        
+        
+          <meta content="/html5/2017/08/15/Html5%E4%B9%8BRange%E5%AF%B9%E8%B1%A1.html" property="og:url">
+        
+        
+          <meta content="2017-08-15T20:45:28+08:00" property="article:published_time">
+          <meta content="/about/" property="article:author">
+        
+        
+          <meta content="/static/img/logo-high-resolution.png" property="og:image">
+        
+        
+          
+          <meta content="html5" property="article:section">
+          
+        
+        
+          
+        
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@\#">
+        <meta name="twitter:creator" content="@\#">
+        
+          <meta name="twitter:title" content="html5之Range对象">
+        
+        
+          <meta name="twitter:url" content="/html5/2017/08/15/Html5%E4%B9%8BRange%E5%AF%B9%E8%B1%A1.html">
+        
+        
+          <meta name="twitter:description" content="用于记录个人学习">
+        
+        
+
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+      <script type="text/javascript">window.baseurl = '';</script>
+      
+        <!-- Custom Fonts -->
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+        <!-- FontAwesome icons -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/74dfc6cf47.css">
+
+        <!-- Core BootStrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <!-- Material Design CSS -->
+        <link rel="stylesheet" href="/static/css/bootstrap-material-design.min.css">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/static/css/syntax.css">
+
+        <!-- Custom CSS -->        
+        <link rel="stylesheet" href="/static/css/thickbox.css">
+        <link rel="stylesheet" href="/static/css/main.css">
+        <link rel="stylesheet" href="/static/css/projects.css">
+
+        <script type="text/javascript">
+          //loadingImage is relative to project dir
+          var tb_pathToImage = "/static/img/loadingAnimation.gif";
+        </script>
+
+  </head>
+
+  <body class="home overflow-hidden">
+    <div class="header-panel shadow-z-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-4 col-xs-12">
+            <div class="row-picture">
+              <img id="about" class="logo-img" src="/static/img/avatar.png" height="75px" width="75px">
+            </div>
+            <div class="row-details">
+              <h4 class="list-group-item-heading">udbbbn</h4>
+              <p class="list-group-item-text">只是一个编程菜鸟</p>
+              <div class="social-icons">
+	
+        <a class="icon" target="_blank" href="http://wpa.qq.com/msgrd?V=1&Uin=669559765&Site=ioshenmue& Menu=yes"><i class="fa fa-qq"></i></a>
+    
+        <a class="icon" target="_blank" href=""><i class="fa fa-wechat"></i></a>
+    
+</div>
+
+            </div>
+            <div class="navbar-header pull-right">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-2x fa-bars"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-md-9 col-sm-8 col-xs-12">
+          <div class="row">
+            <h2 class="blog-title-pro col-md-6 col-sm-12 col-xs-12 ">html5之Range对象</h2>
+            
+            <div class="col-md-6 col-sm-12 col-xs-12 searchcontrol" id="js-search">
+              <input class="form-control" type="text" id="js-search__input" placeholder="Search">
+              <ul class="search__results" id="js-search__results"></ul>
+            </div>
+            
+            </div>
+            <p class="info">
+              
+                <span class="time">15 Aug 2017</span>
+              
+              
+                <span class="categories">
+                  &raquo; 
+                  
+                    <a href="/category/html5">html5</a>
+                    
+                  
+                </span>
+              
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container main outer">
+      <div class="row">
+        <div class="col-md-3 col-xs-12">
+              <nav class="menu">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="list-separator nav navbar-nav well well-primary post">
+
+	
+	
+	
+	
+	
+	
+    
+	
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12 current-menu-item Html5%E4%B9%8BRange%E5%AF%B9%E8%B1%A1.html"><a href="/" target="_self"><i class="fa fa-home"></i> 主页</a></li>
+
+	
+	
+	
+	
+	
+	
+    
+	
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  Html5%E4%B9%8BRange%E5%AF%B9%E8%B1%A1.html"><a href="/about/" target="_self"><i class="fa fa-comments"></i> 关于</a></li>
+
+	
+	
+	
+	
+	
+	
+    
+	
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  Html5%E4%B9%8BRange%E5%AF%B9%E8%B1%A1.html"><a href="/projects" target="_self"><i class="fa fa-desktop"></i> 项目</a></li>
+
+	
+	
+	
+	
+	
+	
+    
+	
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  Html5%E4%B9%8BRange%E5%AF%B9%E8%B1%A1.html"><a href="/#" target="_self"><i class="fa fa-graduation-cap"></i> 个人简历</a></li>
+
+	
+	
+	
+	
+	
+	
+    
+	
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  Html5%E4%B9%8BRange%E5%AF%B9%E8%B1%A1.html"><a href="https://github.com/udbbbn" target="_self"><i class="fa fa-github"></i> Github</a></li>
+
+</ul>
+
+    </div>
+    </nav>
+
+        </div>
+        <div class="col-md-9 col-xs-12 full">
+          <div class="post-content well">
+<article class="content">
+    <div class="post"><h3 id="一range对象的概念"><strong>一、Range对象的概念</strong></h3>
+
+<p>Range对象代表页面上一段连续的区域，通过Range对象可以获取或者修改页面上任何区域的内容。也可以通过Range方法进行复制和移动页面任何区域的元素。</p>
+
+<p>在js的document文档中有一个方法用来创建Range对象，代码如下：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var range = document.createRange();
+</code></pre>
+</div>
+
+<p>在html5中，每个浏览器窗口都会有一个selection对象，代表用户鼠标在页面上所选取得区域，<strong>经测试，ie9一下的浏览器不支持selection对象</strong>，可以通过以下语句创建selection对象。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var selection = document.getSelection()
+或者
+var selection = window.getSelection(); 
+</code></pre>
+</div>
+
+<p>每一个selection对象都有一个或者多个Range对象，每一个range对象代表用户鼠标所选取范围内的一段连续区域，在firefox中，可以通过ctrl键可以选取多个连续的区域，因此在firefox中一个selection对象有多个range对象，在其他浏览器中，用户只能选取一段连续的区域，因此只有一个range对象。</p>
+
+<p>可以通过selection对象的getRangeAt方法来获取selection对象的某个Range对象，如下：</p>
+
+<p>getRangeAt方法有一个参数index，代表该Range对象的序列号；我们可以通过Selection对象的rangeCount参数的值判断用户是否选取了内容；</p>
+
+<ol>
+  <li>当用户没有按下鼠标时候，该参数的值为0.</li>
+  <li>当用户按下鼠标的时候，该参数值为1.</li>
+  <li>当用户使用鼠标同时按住ctrl键时选取了一个或者多个区域时候，该参数值代表用户选取区域的数量。</li>
+  <li>当用户取消区域的选取时，该属性值为1，代表页面上存在一个空的Range对象；</li>
+</ol>
+
+<p>测试代码如下：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>meter<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;script&gt;</span>
+       <span class="kd">function</span> <span class="nx">rangeTest</span><span class="p">()</span> <span class="p">{</span>
+            <span class="kd">var</span>  <span class="nx">html</span><span class="p">,</span>
+            <span class="nx">showRangeDiv</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"showRange"</span><span class="p">),</span>
+             <span class="nx">selection</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getSelection</span><span class="p">();</span>
+            <span class="k">if</span><span class="p">(</span><span class="nx">selection</span><span class="p">.</span><span class="nx">rangeCount</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">html</span> <span class="o">=</span> <span class="s2">"你选取了"</span> <span class="o">+</span> <span class="nx">selection</span><span class="p">.</span><span class="nx">rangeCount</span> <span class="o">+</span> <span class="s2">"段内容&lt;br/&gt;"</span><span class="p">;</span>
+                <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">selection</span><span class="p">.</span><span class="nx">rangeCount</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="kd">var</span> <span class="nx">range</span> <span class="o">=</span> <span class="nx">selection</span><span class="p">.</span><span class="nx">getRangeAt</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+                    <span class="nx">html</span> <span class="o">+=</span> <span class="s2">"第"</span> <span class="o">+</span> <span class="p">(</span><span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"段内容为："</span> <span class="o">+</span> <span class="nx">range</span> <span class="o">+</span> <span class="s2">"&lt;br/&gt;"</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="nx">showRangeDiv</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">html</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="nt">&lt;/script&gt;</span>
+    <span class="nt">&lt;h3&gt;</span>selection对象与range对象的使用实例<span class="nt">&lt;/h3&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"点击我"</span> <span class="na">onclick=</span><span class="s">"rangeTest()"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"showRange"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<p>效果：
+<img src="https://raw.githubusercontent.com/udbbbn/Img/master/2379105-3615b184b3a480b5.png" alt="" /></p>
+
+<p>###<strong>二：Range对象的属性和方法</strong>###</p>
+
+<p>####(1)属性</p>
+
+<p><strong>startContainer</strong></p>
+
+<p>包含“起点”的节点。“包含”的意思是起点所属的节点。</p>
+
+<p><strong>endContainer</strong></p>
+
+<p>包含“结束点”的节点</p>
+
+<p><strong>startOffset</strong></p>
+
+<p>“起点”在startContainer中的偏移量。</p>
+
+<p>如果startContainer是文本节点、注释节点或CDATA节点，则返回“起点”在startContainer中字符偏移量。</p>
+
+<p>如果startContainer是元素节点，则返回“起点”在startContainer.childNodes中的次序。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;p id="p1"&gt;&lt;span&gt;span&lt;/span&gt;&lt;b id="b1"&gt;Hello&lt;/b&gt; World&lt;/p&gt;
+&lt;script type="text/javascript"&gt; 
+var oP1 = document.getElementById('p1') ;
+var oB1 = document.getElementById('b1'); 
+var oRange = document.createRange(); 
+oRange.setStart(oB1.firstChild, 2); // 设置range的“起点” oRange.setEnd(oP1.lastChild, 3); // 设置range的“结束点” alert(oRange.startOffset); // 2，可看到“起点”在&lt;b id="b1"&gt;Hello&lt;/b&gt;应是第三个字符。 
+alert(oRange.startContainer); // 元素oB1.firstChild，文本节点&lt;/script&gt;
+</code></pre>
+</div>
+
+<p><strong>collapsed:</strong></p>
+
+<p>起点和结束点在一起时为true；Range对象为空（刚createRange()时）也为true。</p>
+
+<p><strong>commonAncestorContainer</strong></p>
+
+<p>第一个包含Range的节点，同时包含起点和结束点。</p>
+
+<p>####<strong>(2)定位（设置“起点”和“结束点”）的一些方法</strong></p>
+
+<p><strong>setStart(node, offset)和setEnd(node, offset)</strong></p>
+
+<p><strong>setStart：</strong>设置起点的位置，node是对startContainer的引用，偏移则是startOffset；</p>
+
+<p><strong>setEnd：</strong>设置结束点的位置，node是对endContainer的引用，偏移则是startOffset；</p>
+
+<p>代码如下：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+ <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;title&gt;</span>range3<span class="nt">&lt;/title&gt;</span>
+ <span class="nt">&lt;script&gt;</span>
+  <span class="kd">function</span> <span class="nx">deleteChar</span><span class="p">()</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">div</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"myDiv"</span><span class="p">);</span>
+      <span class="kd">var</span> <span class="nx">textNode</span> <span class="o">=</span> <span class="nx">div</span><span class="p">.</span><span class="nx">firstChild</span><span class="p">;</span>
+      <span class="kd">var</span> <span class="nx">rangeObj</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createRange</span><span class="p">();</span>
+      <span class="nx">rangeObj</span><span class="p">.</span><span class="nx">setStart</span><span class="p">(</span><span class="nx">textNode</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+     <span class="nx">rangeObj</span><span class="p">.</span><span class="nx">setEnd</span><span class="p">(</span><span class="nx">textNode</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
+     <span class="nx">rangeObj</span><span class="p">.</span><span class="nx">deleteContents</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"myDiv"</span> <span class="na">style=</span><span class="s">"color:red"</span><span class="nt">&gt;</span>这段文字是用来删除的<span class="nt">&lt;/div&gt;</span>
+     <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"deleteChar()"</span><span class="nt">&gt;</span>删除文字<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<p><strong>setStartBefore(referenceNode)、setStartAfter(referenceNode)
+setEndBefore(referenceNode)、setEndAfter(referenceNode)</strong></p>
+
+<p><strong>setStartBefore：</strong>将“起点”设置到referenceNode前</p>
+
+<p><strong>setStartAfter：</strong>将“起点”设置到referenceNode后</p>
+
+<p><strong>setEndBefore：</strong>将“结束点”设置到referenceNode前</p>
+
+<p><strong>setEndAfter：</strong>将“结束点”设置到referenceNode后</p>
+
+<p>注意：使用这四个方法设置的“起点”或“结束点”的父节点与referenceNode的父节点是同一个元素。
+代码如下:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;title&gt;&lt;/title&gt;</span>
+        <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"application/javascript"</span><span class="nt">&gt;</span>
+            <span class="kd">function</span> <span class="nx">delrow</span><span class="p">(){</span>
+                <span class="kd">var</span> <span class="nx">table</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"mytable"</span><span class="p">);</span>
+                <span class="k">if</span><span class="p">(</span><span class="nx">table</span><span class="p">.</span><span class="nx">rows</span><span class="p">.</span><span class="nx">length</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">){</span>
+                    <span class="kd">var</span> <span class="nx">row</span><span class="o">=</span><span class="nx">table</span><span class="p">.</span><span class="nx">rows</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+                    <span class="kd">var</span> <span class="nx">rangeObj</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">createRange</span><span class="p">();</span>
+                    <span class="nx">rangeObj</span><span class="p">.</span><span class="nx">setStartBefore</span><span class="p">(</span><span class="nx">row</span><span class="p">);</span>
+                    <span class="nx">rangeObj</span><span class="p">.</span><span class="nx">setEndAfter</span><span class="p">(</span><span class="nx">row</span><span class="p">);</span>
+                    <span class="nx">rangeObj</span><span class="p">.</span><span class="nx">deleteContents</span><span class="p">();</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="nt">&lt;/script&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;table</span> <span class="na">id=</span><span class="s">"mytable"</span> <span class="na">border=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;td&gt;</span>内容1<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td&gt;</span>内容2<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+                <span class="nt">&lt;td&gt;</span>内容3<span class="nt">&lt;/td&gt;</span>
+                <span class="nt">&lt;td&gt;</span>内容4<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;/table&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"delrow()"</span><span class="nt">&gt;</span>删除第一行<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<p><strong>selectNode(referenceNode)和selectNodeContents(referenceNode)</strong></p>
+
+<p><strong>selectNode：</strong>设置Range的范围，包括referenceNode和它的所有后代(子孙)节点。</p>
+
+<p><strong>selectNodeContents：</strong>设置Range的范围，包括它的所有后代节点。
+二者的区别：</p>
+
+<p><img src="https://raw.githubusercontent.com/udbbbn/Img/master/2379105-3615b184b3a480b5.png" alt="" /></p>
+
+<p>####<strong>(3)修改范围的方法</strong></p>
+
+<p><strong>cloneRange()</strong></p>
+
+<p>cloneRange()方法将返回一个当前Range的副本，它也是Range对象。
+注意它和cloneContents()的区别在于返回值不同，一个是HTML片段，一个是Range对象。</p>
+
+<p>代码如下：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>meter<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"p"</span><span class="nt">&gt;</span>这里是随便书写的内容<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"cloneRange()"</span><span class="nt">&gt;</span>克隆<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+    <span class="kd">function</span> <span class="nx">cloneRange</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">rangeObj</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createRange</span><span class="p">();</span>
+    <span class="nx">rangeObj</span><span class="p">.</span><span class="nx">selectNodeContents</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"p"</span><span class="p">));</span>
+    <span class="kd">var</span> <span class="nx">rangeClone</span> <span class="o">=</span> <span class="nx">rangeObj</span><span class="p">.</span><span class="nx">cloneRange</span><span class="p">();</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="nx">rangeClone</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<p><strong>cloneContents()</strong></p>
+
+<p>可以克隆选中Range的fragment并返回改fragment。这个方法类似extractContents()，但不是删除，而是克隆。</p>
+
+<p>代码如下：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>meter<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+     <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"p"</span><span class="nt">&gt;</span>这里是随便书写的内容<span class="nt">&lt;/p&gt;</span>
+     <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"cloneContents()"</span><span class="nt">&gt;</span>克隆<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+    <span class="nt">&lt;script&gt;</span>
+         <span class="kd">function</span> <span class="nx">cloneContents</span><span class="p">()</span> <span class="p">{</span>
+             <span class="kd">var</span> <span class="nx">rangeObj</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createRange</span><span class="p">();</span>
+             <span class="nx">rangeObj</span><span class="p">.</span><span class="nx">selectNodeContents</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"p"</span><span class="p">));</span>
+             <span class="kd">var</span> <span class="nx">rangeClone</span> <span class="o">=</span> <span class="nx">rangeObj</span><span class="p">.</span><span class="nx">cloneContents</span><span class="p">();</span>
+             <span class="nx">alert</span><span class="p">(</span><span class="nx">rangeClone</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+         <span class="p">}</span>
+    <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<p><strong>deleteContents()</strong></p>
+
+<p>从Dom中删除Range选中的fragment。注意该函数没有返回值（实际上为undefined）。</p>
+
+<p>代码如下：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>meter<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+     <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"p"</span><span class="nt">&gt;</span>这里是随便书写的内容<span class="nt">&lt;/p&gt;</span>
+     <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"delRange()"</span><span class="nt">&gt;</span>删除<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+    <span class="nt">&lt;script&gt;</span>
+         <span class="kd">function</span> <span class="nx">delRange</span><span class="p">()</span> <span class="p">{</span>
+             <span class="kd">var</span> <span class="nx">rangeObj</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createRange</span><span class="p">();</span>
+             <span class="nx">rangeObj</span><span class="p">.</span><span class="nx">selectNodeContents</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"p"</span><span class="p">));</span>
+             <span class="kd">var</span> <span class="nx">rangeClone</span> <span class="o">=</span> <span class="nx">rangeObj</span><span class="p">.</span><span class="nx">deleteContents</span><span class="p">();</span>             
+         <span class="p">}</span>
+    <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<p><strong>extractContents()</strong></p>
+
+<p>将选中的Range从DOM树中移到一个fragment中，并返回此fragment。</p>
+
+<p>代码如下:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>meter<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"srcDiv"</span> <span class="na">style=</span><span class="s">"background-color:aquamarine;width:300px;height:50px;"</span><span class="nt">&gt;</span>你好吗？<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"distDiv"</span> <span class="na">style=</span><span class="s">"background-color:bisque;width:300px;height:50px"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"moveContent()"</span><span class="nt">&gt;</span>移动元素<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+    <span class="kd">function</span> <span class="nx">moveContent</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">srcDiv</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"srcDiv"</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">distDiv</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"distDiv"</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">rangeObj</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createRange</span><span class="p">();</span>
+        <span class="nx">rangeObj</span><span class="p">.</span><span class="nx">selectNodeContents</span><span class="p">(</span><span class="nx">srcDiv</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">docFrangMent</span> <span class="o">=</span> <span class="nx">rangeObj</span><span class="p">.</span><span class="nx">extractContents</span><span class="p">();</span>
+        <span class="nx">distDiv</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">docFrangMent</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<p><strong>insertNode</strong></p>
+
+<p>insertNode方法可以插入一个节点到Range中，注意会插入到Range的“起点”。</p>
+
+<p>代码如下：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>meter<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"p1"</span><span class="nt">&gt;&lt;b&gt;</span>Hello<span class="nt">&lt;/b&gt;</span> World<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+    <span class="kd">var</span> <span class="nx">oP1</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"p1"</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">oHello</span> <span class="o">=</span> <span class="nx">oP1</span><span class="p">.</span><span class="nx">firstChild</span><span class="p">.</span><span class="nx">firstChild</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">oWorld</span> <span class="o">=</span> <span class="nx">oP1</span><span class="p">.</span><span class="nx">lastChild</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">oRange</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createRange</span><span class="p">();</span>
+    <span class="kd">var</span> <span class="nx">oSpan</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">"span"</span><span class="p">);</span>
+    <span class="nx">oSpan</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">createTextNode</span><span class="p">(</span><span class="s2">"Inserted text"</span><span class="p">));</span>
+    <span class="nx">oRange</span><span class="p">.</span><span class="nx">setStart</span><span class="p">(</span><span class="nx">oHello</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+    <span class="nx">oRange</span><span class="p">.</span><span class="nx">setEnd</span><span class="p">(</span><span class="nx">oWorld</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+    <span class="nx">oRange</span><span class="p">.</span><span class="nx">insertNode</span><span class="p">(</span><span class="nx">oSpan</span><span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<p><strong>compareBoundaryPoints()</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var compare = comparerange.compareBoundaryPoints(how, sourceRange);
+</code></pre>
+</div>
+
+<p><strong>compare：</strong>返回1, 0, -1.（0为相等，1为时，comparerange在sourceRange之后，-1为comparerange在sourceRange之前）。</p>
+
+<p><strong>how：</strong>比较哪些边界点，为常数。</p>
+
+<p><strong>Range.START_TO_START</strong> - 比较两个 Range 节点的开始点</p>
+
+<p><strong>Range.END_TO_END</strong> - 比较两个 Range 节点的结束点</p>
+
+<p><strong>Range.START_TO_END</strong> - 用 sourceRange 的开始点与当前范围的结束点比较</p>
+
+<p><strong>Range.END_TO_START</strong> - 用 sourceRange 的结束点与当前范围的开始点比较</p>
+
+<p><strong>sourceRange：</strong>Range对象的边界。</p>
+
+<p><strong>detach()</strong>
+虽然GC（垃圾收集器）会将其收集，但用detach()释放range对象是一个好习惯。语法为：oRange.detach();</p>
+
+<p><strong>toString()</strong>
+返回该范围表示的文档区域的纯文本内容，不包含任何标签;</p>
+
+<p>来源：<a href="http://www.jianshu.com/p/ad2f818cc3b0">http://www.jianshu.com/p/ad2f818cc3b0</a></p>
+</div>
+    <hr />
+    <div class="share-page">
+    <!-- Share this on &rarr;
+ <a href="https://twitter.com/share" class="twitter-share-button" data-via="\#">Tweet</a> -->
+<!--<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> -->
+
+<!-- Google + -->
+<div class="g-plus" data-action="share" data-annotation="bubble"></div>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+<!-- Facebook -->
+<div class="fb-share-button" data-href="/html5/2017/08/15/Html5%E4%B9%8BRange%E5%AF%B9%E8%B1%A1.html" data-layout="button_count" style="position: relative; top: -8px; left: 3px;"></div>
+</div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</article>
+<hr />
+
+
+    
+    
+        
+            
+        
+    
+
+    
+    
+        
+            
+        
+    
+
+    
+    
+        
+            
+        
+    
+
+    
+    
+        
+            
+        
+    
+
+    
+    
+        
+            
+        
+    
+
+    
+    
+        
+            
+        
+    
+
+    
+    
+        
+            
+        
+    
+
+
+
+<div class="PageNavigation">
+  
+    <a class="prev pull-left" href="/jekyll/2017/08/15/%E5%8D%9A%E5%AE%A2%E6%94%B9%E7%94%A8jekyll%E6%A8%A1%E6%9D%BF.html">&laquo; 博客改用jekyll模板</a>
+  
+  
+</div>
+
+
+<div class="disqus-comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+
+        var disqus_shortname = "udbbbn";
+        var disqus_identifier = "_html5之Range对象";
+        var disqus_title = "html5之Range对象";
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    /* ]]> */
+    </script>
+</div>
+</div>
+          <div class="row">
+            <div class="col-md-12 col-xs-12 footer">
+              <footer>
+  © 2017 udbbbn <a href="#">Privacy link</a> - Powered by Jekyll.
+</footer>
+<div align="center">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-0000000000000000"
+    data-ad-slot="0000000000"
+    data-ad-format="auto"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+            </div>
+          </div>
+        </div> <!-- end /.col-md-9 -->
+      </div> <!-- end /.row -->
+    </div>
+
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script src="/static/js/super-search.js"></script>
+
+<script src="/static/js/thickbox-compressed.js"></script>
+<script src="/static/js/material.min.js"></script>
+<script src="/static/js/main.js"></script>
+<script src="/static/js/projects.js"></script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72862926-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
