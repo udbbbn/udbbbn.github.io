@@ -24,11 +24,11 @@
           <meta content="用于记录个人学习" property="og:description">
         
         
-          <meta content="/" property="og:url">
+          <meta content="http://localhost:4000/" property="og:url">
         
         
         
-          <meta content="/static/img/logo-high-resolution.png" property="og:image">
+          <meta content="http://localhost:4000/static/img/logo-high-resolution.png" property="og:image">
         
         
         
@@ -39,7 +39,7 @@
           <meta name="twitter:title" content="Blog">
         
         
-          <meta name="twitter:url" content="/">
+          <meta name="twitter:url" content="http://localhost:4000/">
         
         
           <meta name="twitter:description" content="用于记录个人学习">
@@ -47,7 +47,7 @@
         
 
       <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
-      <script type="text/javascript">window.baseurl = '';</script>
+      <script type="text/javascript">window.baseurl = 'http://localhost:4000';</script>
       
         <!-- Custom Fonts -->
         <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
@@ -166,7 +166,7 @@
 	
     
 	
-	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  "><a href="/#" target="_self"><i class="fa fa-graduation-cap"></i> 个人简历</a></li>
+	<li class="col-lg-12 col-md-12 col-sm-4 col-xs-12  "><a href="/resume" target="_self"><i class="fa fa-graduation-cap"></i> 个人简历</a></li>
 
 	
 	
@@ -253,36 +253,40 @@
       </div>
       <div class="list-group-separator"></div>
       
-      <div class="list-group-item">
-        <div class="row-action-primary">
-          <i class="fa fa-sticky-note"></i>
-        </div>
-        <div class="row-content">
-          <div class="least-content">23 Jul 2017</div>
-          <h4 class="list-group-item-heading"><a href="/markdown/2017/07/23/%E8%A7%A3%E5%86%B3win10%E6%89%93%E4%B8%8D%E5%BC%80markdown%E9%97%AE%E9%A2%98.html">解决win10打不开报错问题</a></h4>
-
-          <p class="list-group-item-text">问题描述 将开发环境换到笔记本后发现markdown打不开 报错’Awesomium.Windows.Controls.WebControl’，如下图： 解决方案 命令行输入regedit...</p>
-        </div>
-      </div>
-      <div class="list-group-separator"></div>
-      
-      <div class="list-group-item">
-        <div class="row-action-primary">
-          <i class="fa fa-sticky-note"></i>
-        </div>
-        <div class="row-content">
-          <div class="least-content">23 Jul 2017</div>
-          <h4 class="list-group-item-heading"><a href="/pelican/2017/07/23/%E6%9B%BF%E6%8D%A2%E4%B8%BB%E9%A2%98.html">替换pelican-bootstrap3主题</a></h4>
-
-          <p class="list-group-item-text">自从接触互联网以来，越来越发现博客的重要性。于是，又重新拾起博客，但由于之前只搭建过，并没有其他操作。所以就连替换主题都花了很大功夫。 pelican主题更换 首先在pelican主题开源库中找到自己想要的主题，本次替换的主题是pelican-bootstrap3，这个主题的配置好像跟其他的不一样，需要多配置些东西。 在根目录下的pelicanconf.py文件中添加或更改自己喜欢的主题。 THEME...</p>
-        </div>
-      </div>
-      <div class="list-group-separator"></div>
-      
     </div>
    
 
     <!-- Pagination links -->
+    
+    <ul class="pager">
+      
+        <li class="previous disabled"><span aria-hidden="true">&laquo;</span></li>
+      
+
+      <li><a href="/">First</a></li>
+
+      
+        
+          <li class="active">
+             <a>1<span class="sr-only">(current)</span></a>
+          </li>
+        
+      
+        
+          <li>
+            <a href="/page2/">2</a>
+          </li>
+        
+      
+
+      <li><a href="/page2/">Last</a></li>
+
+      
+        <li class="next">
+          <a href="/page2/">&raquo;</a>
+        </li>
+      
+    </ul>
     
 </div><!-- end #home -->
 

@@ -3,10 +3,10 @@
   <channel>
     <title>udbbbn</title>
     <description>用于记录个人学习</description>
-    <link>/</link>
-    <atom:link href="/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 24 Sep 2017 10:45:23 +0800</pubDate>
-    <lastBuildDate>Sun, 24 Sep 2017 10:45:23 +0800</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/sitemap.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 23 Jul 2018 18:43:12 +0800</pubDate>
+    <lastBuildDate>Mon, 23 Jul 2018 18:43:12 +0800</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
     
       <item>
@@ -383,8 +383,8 @@ setEndBefore(referenceNode)、setEndAfter(referenceNode)&lt;/strong&gt;&lt;/p&gt
 &lt;p&gt;来源：&lt;a href=&quot;http://www.jianshu.com/p/ad2f818cc3b0&quot;&gt;http://www.jianshu.com/p/ad2f818cc3b0&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 15 Aug 2017 20:45:28 +0800</pubDate>
-        <link>/html5/2017/08/15/Html5%E4%B9%8BRange%E5%AF%B9%E8%B1%A1.html</link>
-        <guid isPermaLink="true">/html5/2017/08/15/Html5%E4%B9%8BRange%E5%AF%B9%E8%B1%A1.html</guid>
+        <link>http://localhost:4000/html5/2017/08/15/Html5%E4%B9%8BRange%E5%AF%B9%E8%B1%A1.html</link>
+        <guid isPermaLink="true">http://localhost:4000/html5/2017/08/15/Html5%E4%B9%8BRange%E5%AF%B9%E8%B1%A1.html</guid>
         
         
         <category>html5</category>
@@ -471,8 +471,8 @@ categories: 定义了文章所属的目录，一个list，将会根据这个目�
 &lt;p&gt;&lt;strong&gt;感谢阅读&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 15 Aug 2017 20:45:28 +0800</pubDate>
-        <link>/jekyll/2017/08/15/%E5%8D%9A%E5%AE%A2%E6%94%B9%E7%94%A8jekyll%E6%A8%A1%E6%9D%BF.html</link>
-        <guid isPermaLink="true">/jekyll/2017/08/15/%E5%8D%9A%E5%AE%A2%E6%94%B9%E7%94%A8jekyll%E6%A8%A1%E6%9D%BF.html</guid>
+        <link>http://localhost:4000/jekyll/2017/08/15/%E5%8D%9A%E5%AE%A2%E6%94%B9%E7%94%A8jekyll%E6%A8%A1%E6%9D%BF.html</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/2017/08/15/%E5%8D%9A%E5%AE%A2%E6%94%B9%E7%94%A8jekyll%E6%A8%A1%E6%9D%BF.html</guid>
         
         
         <category>jekyll</category>
@@ -606,8 +606,8 @@ Btn.click()
 &lt;p&gt;&lt;strong&gt;感谢阅读&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 13 Aug 2017 23:55:04 +0800</pubDate>
-        <link>/python/2017/08/13/python+selenium.html</link>
-        <guid isPermaLink="true">/python/2017/08/13/python+selenium.html</guid>
+        <link>http://localhost:4000/python/2017/08/13/python+selenium.html</link>
+        <guid isPermaLink="true">http://localhost:4000/python/2017/08/13/python+selenium.html</guid>
         
         
         <category>python</category>
@@ -758,8 +758,8 @@ ctrl+alt+shift+p python 如果想要新建其他类型的文件模板的话，�
 &lt;p&gt;以上就是个人觉得不错的插件，在&lt;a href=&quot;https://packagecontrol.io/browse&quot;&gt;https://packagecontrol.io/browse&lt;/a&gt;这里可以找到更多的sublime插件。细心的朋友应该发现了很多插件的快捷键是重复的，可以自行修改所好快捷键。&lt;/p&gt;
 </description>
         <pubDate>Sun, 30 Jul 2017 19:42:28 +0800</pubDate>
-        <link>/sublime/2017/07/30/sublime%E6%8F%92%E4%BB%B6.html</link>
-        <guid isPermaLink="true">/sublime/2017/07/30/sublime%E6%8F%92%E4%BB%B6.html</guid>
+        <link>http://localhost:4000/sublime/2017/07/30/sublime%E6%8F%92%E4%BB%B6.html</link>
+        <guid isPermaLink="true">http://localhost:4000/sublime/2017/07/30/sublime%E6%8F%92%E4%BB%B6.html</guid>
         
         
         <category>sublime</category>
@@ -817,8 +817,8 @@ puer
 &lt;p&gt;参考&lt;a href=&quot;http://www.html-js.com/article/Before-and-after-the-frontend-development-tools-Puer-super-simple-tools--low-carbon-separation-of-the-end-of-development&quot;&gt;http://www.html-js.com/article/Before-and-after-the-frontend-development-tools-Puer-super-simple-tools–low-carbon-separation-of-the-end-of-development&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 29 Jul 2017 22:11:00 +0800</pubDate>
-        <link>/nodejs/2017/07/29/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91-puer.html</link>
-        <guid isPermaLink="true">/nodejs/2017/07/29/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91-puer.html</guid>
+        <link>http://localhost:4000/nodejs/2017/07/29/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91-puer.html</link>
+        <guid isPermaLink="true">http://localhost:4000/nodejs/2017/07/29/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91-puer.html</guid>
         
         
         <category>nodejs</category>
@@ -846,8 +846,8 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\FipsAlgorithmPolicy\Enab
 &lt;p&gt;本文参考&lt;a href=&quot;http://blog.csdn.net/chengjierui/article/details/53065599&quot;&gt;链接&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 23 Jul 2017 14:47:00 +0800</pubDate>
-        <link>/markdown/2017/07/23/%E8%A7%A3%E5%86%B3win10%E6%89%93%E4%B8%8D%E5%BC%80markdown%E9%97%AE%E9%A2%98.html</link>
-        <guid isPermaLink="true">/markdown/2017/07/23/%E8%A7%A3%E5%86%B3win10%E6%89%93%E4%B8%8D%E5%BC%80markdown%E9%97%AE%E9%A2%98.html</guid>
+        <link>http://localhost:4000/markdown/2017/07/23/%E8%A7%A3%E5%86%B3win10%E6%89%93%E4%B8%8D%E5%BC%80markdown%E9%97%AE%E9%A2%98.html</link>
+        <guid isPermaLink="true">http://localhost:4000/markdown/2017/07/23/%E8%A7%A3%E5%86%B3win10%E6%89%93%E4%B8%8D%E5%BC%80markdown%E9%97%AE%E9%A2%98.html</guid>
         
         
         <category>markdown</category>
@@ -892,8 +892,8 @@ git push origin master
 &lt;/p&gt;
 </description>
         <pubDate>Sun, 23 Jul 2017 14:47:00 +0800</pubDate>
-        <link>/pelican/2017/07/23/%E6%9B%BF%E6%8D%A2%E4%B8%BB%E9%A2%98.html</link>
-        <guid isPermaLink="true">/pelican/2017/07/23/%E6%9B%BF%E6%8D%A2%E4%B8%BB%E9%A2%98.html</guid>
+        <link>http://localhost:4000/pelican/2017/07/23/%E6%9B%BF%E6%8D%A2%E4%B8%BB%E9%A2%98.html</link>
+        <guid isPermaLink="true">http://localhost:4000/pelican/2017/07/23/%E6%9B%BF%E6%8D%A2%E4%B8%BB%E9%A2%98.html</guid>
         
         
         <category>pelican</category>
@@ -904,7 +904,7 @@ git push origin master
       <item>
         <title>Cool project 1</title>
         <description>Cool project 1</description>
-        <link>#</link>
+        <link>http://localhost:4000#</link>
         <pubDate>Wed, 01 Jan 2014 00:00:00 +0800</pubDate>
         
         <category>Angular JS</category>
@@ -916,7 +916,7 @@ git push origin master
       <item>
         <title>Cool project 2</title>
         <description>Cool project 2</description>
-        <link>#</link>
+        <link>http://localhost:4000#</link>
         <pubDate>Thu, 01 May 2014 00:00:00 +0800</pubDate>
         
         <category>Android</category>
@@ -928,7 +928,7 @@ git push origin master
       <item>
         <title>Cool project 3</title>
         <description>Cool project 3</description>
-        <link>#</link>
+        <link>http://localhost:4000#</link>
         <pubDate>Sun, 01 Jun 2014 00:00:00 +0800</pubDate>
         
         <category>HTML</category>
@@ -942,7 +942,7 @@ git push origin master
       <item>
         <title>Cool project 4</title>
         <description>Cool project 4</description>
-        <link></link>
+        <link>http://localhost:4000</link>
         <pubDate>Sat, 01 Oct 2016 00:00:00 +0800</pubDate>
         
         <category>Android</category>
