@@ -5,9 +5,37 @@
     <description>用于记录个人学习</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 23 Jul 2018 18:47:30 +0800</pubDate>
-    <lastBuildDate>Mon, 23 Jul 2018 18:47:30 +0800</lastBuildDate>
+    <pubDate>Sun, 09 Sep 2018 12:09:02 +0800</pubDate>
+    <lastBuildDate>Sun, 09 Sep 2018 12:09:02 +0800</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
+    
+      <item>
+        <title>商场app设计图展示及各项目功能流程图原型图</title>
+        <description>&lt;h2 id=&quot;商城app&quot;&gt;商城App&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;部分设计图&lt;/strong&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/udbbbn/Img/master/JR%E9%A6%96%E9%A1%B5.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/udbbbn/Img/master/JR%E7%A1%AE%E8%AE%A4%E8%AE%A2%E5%8D%95.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/udbbbn/Img/master/JR%E6%88%91%E7%9A%84%E8%AE%A2%E5%8D%95%EF%BC%88%E4%BF%AE%E6%94%B9%EF%BC%89.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;园区管理系统&quot;&gt;园区管理系统&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;功能流程图&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;前台：
+&lt;img src=&quot;https://raw.githubusercontent.com/udbbbn/Img/master/%E7%AC%AC%E4%B8%80%E6%9C%9F%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B--%E5%89%8D%E5%8F%B0.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;后台：
+&lt;img src=&quot;https://raw.githubusercontent.com/udbbbn/Img/master/%E7%AC%AC%E4%B8%80%E6%9C%9F%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B--%E5%90%8E%E5%8F%B005-10.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 09 Sep 2018 11:23:22 +0800</pubDate>
+        <link>/project/2018/09/09/%E9%A1%B9%E7%9B%AE%E8%AE%BE%E8%AE%A1%E5%9B%BE%E6%B5%81%E7%A8%8B%E5%9B%BE%E5%B1%95%E7%A4%BA.html</link>
+        <guid isPermaLink="true">/project/2018/09/09/%E9%A1%B9%E7%9B%AE%E8%AE%BE%E8%AE%A1%E5%9B%BE%E6%B5%81%E7%A8%8B%E5%9B%BE%E5%B1%95%E7%A4%BA.html</guid>
+        
+        
+        <category>project</category>
+        
+      </item>
     
       <item>
         <title>html5之Range对象</title>
